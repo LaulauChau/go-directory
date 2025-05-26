@@ -2,6 +2,10 @@
 
 Phone directory application with CLI and web interface.
 
+## Team Members
+
+- [Minh-Phuoc, Laurent Chau (minh-phuoc.chau@efrei.net)](minh-phuoc.chau@efrei.net)
+
 ## Web Interface
 
 Start the web server:
