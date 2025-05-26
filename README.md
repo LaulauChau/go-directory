@@ -6,7 +6,7 @@ Phone directory application with CLI and web interface.
 
 Start the web server:
 
-````bash
+```bash
 # Start web server on default port 8080
 go run ./cmd/go-directory/main.go --web
 
@@ -31,7 +31,7 @@ go run ./cmd/go-directory/main.go --action delete --name "John Doe"
 
 # Edit a contact
 go run ./cmd/go-directory/main.go --action edit --name "John Doe" --tel "0987654321"
-````
+```
 
 ## Flags
 
