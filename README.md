@@ -12,6 +12,7 @@ go run ./cmd/go-directory/main.go --web
 
 # Start web server on custom port
 go run ./cmd/go-directory/main.go --web --port 3000
+```
 
 ## CLI Commands
 
