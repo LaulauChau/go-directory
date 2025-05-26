@@ -25,3 +25,6 @@ go.work.sum
 .env
 
 contacts.json
+
+# templ
+*_templ.go

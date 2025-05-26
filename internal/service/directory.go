@@ -67,11 +67,24 @@ func (d *Directory) EditContact(name, newPhone string) error {
 func (d *Directory) SearchContact(name string) (*domain.Contact, error) {
 	name = strings.TrimSpace(name)
 	for _, contact := range d.contacts {
-		if strings.EqualFold(contact.Name, name) {
+		if strings.Contains(strings.ToLower(contact.Name), strings.ToLower(name)) {
 			return &contact, nil
 		}
 	}
 	return nil, fmt.Errorf("contact with name '%s' not found", name)
+}
+
+func (d *Directory) SearchContacts(name string) []domain.Contact {
+	name = strings.TrimSpace(name)
+	var matches []domain.Contact
+
+	for _, contact := range d.contacts {
+		if strings.Contains(strings.ToLower(contact.Name), strings.ToLower(name)) {
+			matches = append(matches, contact)
+		}
+	}
+
+	return matches
 }
 
 func (d *Directory) ListContacts() []domain.Contact {
